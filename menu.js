@@ -12,7 +12,18 @@ function criarMenu() {
     document.body.appendChild(header);
     header.appendChild(nav);
     nav.appendChild(ul);
-};
+
+    // Estilizando o header e o ul após a criação
+    header.style.backgroundColor = '#071D41';
+    header.style.fontFamily = 'Arial';
+
+    ul.style.height = '40px';
+    ul.style.display = 'flex';
+    ul.style.justifyContent = 'center';
+    ul.style.alignItems = 'center';
+    ul.style.gap = '20px';
+    ul.style.listStyleType = 'none';
+}
 
 function adicionarItensAoMenu() {
     const ul = document.querySelector('ul');
@@ -28,21 +39,8 @@ function adicionarItensAoMenu() {
         li.appendChild(link);
         ul.appendChild(li);
     });
-};
+}
 
-const header = document.querySelector('header');
-header.style.backgroundColor = '#071D41';
-header.style.fontFamily = 'Arial';
-
-const ul = document.querySelector('ul');
-ul.style.height = '40px';
-
-ul.style.display = 'flex';
-ul.style.justifyContent = 'center';
-ul.style.alignItems = 'center';
-ul.style.gap = '20px';
-
-ul.style.listStyleType = 'none';
-
-
-
+// Chamando as funções para criar o menu e adicionar os itens
+criarMenu();
+adicionarItensAoMenu();
